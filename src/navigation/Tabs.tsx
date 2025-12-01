@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
 
 export default function Tabs() {
-  const base = "px-4 py-3 font-medium text-alt_contrast";
-  const active = "text-primary border-b-2 border-primary";
+  const base = "px-4 py-3 font-medium text-alt_CONTRAST";
+  const active = "text-PRIMARY border-b-2 border-PRIMARY";
 
   return (
-    <nav className="flex gap-6 p-4 bg-tertiary">
+    <nav className="flex gap-6 p-4 bg-TERTIARY">
       <NavLink
         to="/"
         className={({ isActive }) => (isActive ? `${base} ${active}` : base)}
