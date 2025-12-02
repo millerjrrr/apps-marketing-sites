@@ -19,7 +19,10 @@
     @apply p-2 text-WHITE text-base hover:text-CONTRAST transition-colors cursor-pointer hover:text-[16.2px];
   }
   .opening-banner {
-    @apply flex flex-col items-center md:flex-row;
+    @apply flex flex-col items-center w-full bg-RAISE md:flex-row;
+  }
+  .opening-banner-block {
+    @apply flex flex-1 flex-col items-center bg-RAISE;
   }
   .badge {
     @apply p-3 h-[90px];
