@@ -13,13 +13,16 @@
     @apply flex flex-row justify-center fixed top-0 left-0 z-50 w-full;
   }
   .inner-container {
-    @apply flex flex-row justify-between font-bold p-2 md:p-4 w-full max-w-6xl;
+    @apply flex justify-between font-bold p-2 md:p-4 w-full max-w-6xl;
   }
   h1 {
-    @apply text-white font-bold text-6xl text-center inline-block;
+    @apply text-white font-bold text-5xl md:text-6xl text-center inline-block;
+  }
+  h2 {
+    @apply text-white font-bold text-2xl md:text-3xl text-center inline-block;
   }
   p {
-    @apply text-CONTRAST text-lg text-center;
+    @apply text-CONTRAST text-base;
   }
 }
 
@@ -37,7 +40,7 @@
     @apply flex flex-1 flex-col items-center text-center justify-center;
   }
   .badge {
-    @apply p-3 h-[90px];
+    @apply p-1 h-[70px] md:p-3 md:h-[90px];
   }
   .badge-container {
     @apply flex flex-col md:flex-row;

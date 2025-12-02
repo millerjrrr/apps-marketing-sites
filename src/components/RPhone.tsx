@@ -98,8 +98,10 @@ interface RPhoneProps {
 }
 
 export const RPhone: React.FC<RPhoneProps> = ({ scale = 300 }) => {
+  const width = Math.min(scale, window.innerWidth - 50);
+
   return (
-    <div style={{ width: scale, height: scale * 2.3 }}>
+    <div style={{ width, height: width * 2.3 }}>
       <Canvas camera={{ position: [0, 0, 3] }}>
         <ambientLight intensity={0.7} />
         <directionalLight position={[5, 5, 5]} intensity={1} />

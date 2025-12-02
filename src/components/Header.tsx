@@ -3,7 +3,7 @@ export default function Header() {
     <div>
       <div className="h-20"></div>
       <header className="header">
-        <div className="inner-container">
+        <div className="inner-container flex-row">
           <img
             src="adaptive-icon.png"
             className="site-icon bg-PRIMARY md:bg-transparent rounded-full"
