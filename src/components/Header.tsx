@@ -1,14 +1,20 @@
 export default function Header() {
   return (
-    <header className="flex flex-row justify-between items-center font-bold p-4 bg-red-500">
-      <div className="flex flex-col items-center font-bold text-WHITE ">
-        <img src="adaptive-icon.png" className="w-12 h-12" />
-      </div>
-      <div className="flex flex-row">
-        <p className="app-link">HOME</p>
-        <p className="app-link">ABOUT</p>
-        <p className="app-link">WEB APP</p>
-      </div>
-    </header>
+    <div>
+      <div className="h-20"></div>
+      <header className="header">
+        <div className="inner-container">
+          <img
+            src="adaptive-icon.png"
+            className="site-icon bg-PRIMARY md:bg-transparent rounded-full"
+          />
+          <div className="flex flex-row bg-PRIMARY md:bg-transparent pl-2 rounded-l-full translate-x-[8px] border-2 border-TERTIARY border-r-0 md:border-0">
+            <p className="app-link">HOME</p>
+            <p className="app-link">ABOUT</p>
+            <p className="app-link">WEB APP</p>
+          </div>
+        </div>
+      </header>
+    </div>
   );
 }

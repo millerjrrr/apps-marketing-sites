@@ -6,8 +6,14 @@
   body {
     @apply max-w-6xl mx-auto px-4 bg-gradient-to-b from-PRIMARY to-TERTIARY;
   }
+  header {
+    @apply flex flex-row justify-center fixed top-0 left-0 z-50 w-full;
+  }
+  .inner-container {
+    @apply flex flex-row justify-between font-bold p-2 md:p-4 w-full max-w-6xl;
+  }
   h1 {
-    @apply text-white font-bold text-6xl text-center;
+    @apply text-white font-bold text-6xl text-center inline-block;
   }
   p {
     @apply text-CONTRAST text-lg text-center;
@@ -15,6 +21,9 @@
 }
 
 @layer components {
+  .site-icon {
+    @apply w-12 h-12 md:w-24 md:h-24;
+  }
   .app-link {
     @apply p-2 text-WHITE text-base hover:text-CONTRAST transition-colors cursor-pointer hover:text-[16.2px];
   }
