@@ -1,6 +1,6 @@
-import siteContent from "../assets/siteContent";
-import { urls } from "../assets/urls";
-import RPhone from "./RPhone";
+import siteContent from "../../assets/siteContent";
+import { urls } from "../../assets/urls";
+import RPhone from "../RPhone";
 
 const OpenBanner = () => {
   const { title, subTitle, tagLine } = siteContent.home.openingBanner;
@@ -32,7 +32,7 @@ const OpenBanner = () => {
             </a>
           </div>
         </div>
-        <RPhone />
+        <RPhone name="iPhone" />
       </div>
     </div>
   );

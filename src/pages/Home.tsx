@@ -1,5 +1,5 @@
-import InformationBanner from "../components/InformationBanner";
-import OpenBanner from "../components/OpenBanner";
+import InformationBanner from "../components/HomePageComponents/InformationBanner";
+import OpenBanner from "../components/HomePageComponents/OpenBanner";
 
 export default function Home() {
   return (

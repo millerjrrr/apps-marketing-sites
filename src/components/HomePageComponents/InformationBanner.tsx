@@ -1,6 +1,6 @@
-import siteContent from "../assets/siteContent";
-import { useInView } from "../hooks/useInView";
-import RPhone from "./RPhone";
+import siteContent from "../../assets/siteContent";
+import { useInView } from "../../hooks/useInView";
+import RPhone from "../RPhone";
 
 const BannerCard: React.FC<{
   title: string;
@@ -39,10 +39,7 @@ const InformationBanner = () => {
   return (
     <div className="bg-SECONDARY w-full flex flex-1 justify-center items-center">
       <div className="inner-container flex-col md:flex-row">
-        <div className="md:px-[60px] flex justify-center">
-          <RPhone name="InformationBannerPhone" />
-        </div>
-        <div className="flex items-center">
+        <div className="flex items-center order-1 md:order-2">
           <div>
             <div className="h-25 flex flex-1 flex-col items-start m-5  px-5  text-left">
               <h3>INTRODUCTION</h3>
@@ -58,6 +55,10 @@ const InformationBanner = () => {
               />
             ))}
           </div>
+        </div>
+
+        <div className="md:px-[60px] flex justify-center order-2 md:order-1">
+          <RPhone name="sPhone" />
         </div>
       </div>
     </div>
