@@ -70,72 +70,73 @@ const RotatingPhone: React.FC<RPhoneProps> = ({
     }
 
     const screenMesh = clone.getObjectByName(screenMeshName) as THREE.Mesh;
-    const uv = (screenMesh.geometry as THREE.BufferGeometry).attributes
-      .uv as THREE.BufferAttribute;
 
-    if (!uvAdjusted.current) {
-      switch (name) {
-        case "iPhone":
+    // VERY IMPORTANT: clone geometry before changing UVs
+    screenMesh.geometry = screenMesh.geometry.clone();
+
+    const uv = (screenMesh.geometry as THREE.BufferGeometry).attributes.uv;
+
+    switch (name) {
+      case "iPhone":
+        for (let i = 0; i < uv.count; i++) {
+          const x = uv.getX(i);
+          uv.setX(i, 0.5 + (x - 0.5) * 2.2);
+        }
+        uv.needsUpdate = true;
+        uvAdjusted.current = true;
+        break;
+      case "sPhone":
+        {
+          let minV = Infinity;
+          let maxV = -Infinity;
+
           for (let i = 0; i < uv.count; i++) {
-            const x = uv.getX(i);
-            uv.setX(i, 0.5 + (x - 0.5) * 2.2);
+            const v = uv.getY(i);
+            if (v < minV) minV = v;
+            if (v > maxV) maxV = v;
           }
+
+          for (let i = 0; i < uv.count; i++) {
+            const v = uv.getY(i);
+            const newV = (3.1 * (maxV - v)) / (maxV - minV);
+            uv.setY(i, newV);
+          }
+          let minU = Infinity;
+          let maxU = -Infinity;
+
+          for (let i = 0; i < uv.count; i++) {
+            const u = uv.getX(i);
+            if (u < minU) minU = u;
+            if (u > maxU) maxU = u;
+          }
+
+          const centerU = (minU + maxU) / 2;
+
+          const expand = 4.1;
+
+          console.log(minU, maxU, centerU, uv.getX(uv.count / 2), uv.count);
+
+          for (let i = 0; i < uv.count; i++) {
+            const u = uv.getX(i);
+            const newU = centerU / 2.05 + (u - centerU) * expand;
+            uv.setX(i, newU);
+          }
+
           uv.needsUpdate = true;
           uvAdjusted.current = true;
-          break;
-        case "sPhone":
-          {
-            let minV = Infinity;
-            let maxV = -Infinity;
-
-            for (let i = 0; i < uv.count; i++) {
-              const v = uv.getY(i);
-              if (v < minV) minV = v;
-              if (v > maxV) maxV = v;
-            }
-
-            for (let i = 0; i < uv.count; i++) {
-              const v = uv.getY(i);
-              const newV = (3.1 * (maxV - v)) / (maxV - minV);
-              uv.setY(i, newV);
-            }
-            let minU = Infinity;
-            let maxU = -Infinity;
-
-            for (let i = 0; i < uv.count; i++) {
-              const u = uv.getX(i);
-              if (u < minU) minU = u;
-              if (u > maxU) maxU = u;
-            }
-
-            const centerU = (minU + maxU) / 2;
-
-            const expand = 4.1;
-
-            console.log(minU, maxU, centerU, uv.getX(uv.count / 2), uv.count);
-
-            for (let i = 0; i < uv.count; i++) {
-              const u = uv.getX(i);
-              const newU = centerU / 2.05 + (u - centerU) * expand;
-              uv.setX(i, newU);
-            }
-
-            uv.needsUpdate = true;
-            uvAdjusted.current = true;
-          }
-          break;
-        case "gPhone-L":
-        case "gPhone-R":
-          for (let i = 0; i < uv.count; i++) {
-            const x = uv.getX(i);
-            uv.setX(i, 0.5 + (x - 0.5) * 1.2);
-            const y = uv.getY(i);
-            uv.setY(i, 0.5 + (y - 0.5) * 1.1);
-          }
-          uv.needsUpdate = true;
-          uvAdjusted.current = true;
-          break;
-      }
+        }
+        break;
+      case "gPhone-L":
+      case "gPhone-R":
+        for (let i = 0; i < uv.count; i++) {
+          const x = uv.getX(i);
+          uv.setX(i, 0.5 + (x - 0.5) * 1.2);
+          const y = uv.getY(i);
+          uv.setY(i, 0.5 + (y - 0.5) * 1.1);
+        }
+        uv.needsUpdate = true;
+        uvAdjusted.current = true;
+        break;
     }
 
     phoneRef.current = clone; // mutable
