@@ -31,7 +31,7 @@
     @apply inline-block cursor-pointer select-none text-left text-xl font-bold text-WHITE lg:text-xl;
   }
   p {
-    @apply text-base text-CONTRAST;
+    @apply text-base text-WHITE;
   }
 }
 
@@ -45,8 +45,8 @@
   .opening-banner {
     @apply flex flex-col items-center lg:flex-row;
   }
-  .block {
-    @apply flex flex-1 flex-col items-center justify-center text-center lg:items-start lg:text-left;
+  .footer-block {
+    @apply flex flex-1 flex-col items-start text-left;
   }
   .badge {
     @apply h-[70px] p-1 lg:h-[90px] lg:p-3;

@@ -8,7 +8,7 @@ const OpenBanner = () => {
   return (
     <div className="flex w-full flex-1 items-center justify-center">
       <div className="inner-container opening-banner overflow-x-hidden md:overflow-x-visible">
-        <div className="block inline-block flex animate-pulseScale justify-center">
+        <div className="inline-block flex w-full animate-pulseScale flex-col items-center justify-center text-center">
           <img className="app-icon" src="app-icon.png" />
           <h1 className="">{title}</h1>
           <p className="pb-4 font-bold">{subTitle}</p>

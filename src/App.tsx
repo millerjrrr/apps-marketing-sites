@@ -5,6 +5,8 @@ import About from "./pages/About";
 import Contact from "./pages/WebApp";
 import Home from "./pages/Home";
 import WebApp from "./pages/WebApp";
+import PrivacyPolicyPage from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/Terms&Conditions";
 
 export default function App() {
   return (
@@ -16,6 +18,11 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/web-app" element={<WebApp />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route
+            path="/terms-and-conditions"
+            element={<TermsAndConditions />}
+          />
         </Routes>
       </main>
       <Footer />

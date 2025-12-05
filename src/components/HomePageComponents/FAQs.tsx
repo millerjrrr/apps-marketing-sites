@@ -23,7 +23,9 @@ const FAQItem: React.FC<FaqType> = ({ q, a }) => {
           <h4>{q}</h4>
         </div>
       </div>
-      <p className={`pl-6 text-left ${open ? "block" : "hidden"}`}>{a}</p>
+      <p className={`pl-6 text-left ${open ? "footer-block" : "hidden"}`}>
+        {a}
+      </p>
     </div>
   );
 };
