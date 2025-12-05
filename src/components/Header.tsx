@@ -30,7 +30,7 @@ export default function Header() {
             <a href="/" className="app-link p-2">
               HOME
             </a>
-            <a href="web-app" className="app-link p-2">
+            <a href="mobile-app" className="app-link p-2">
               WEB APP
             </a>
             <a href="/contact" className="app-link p-2">
