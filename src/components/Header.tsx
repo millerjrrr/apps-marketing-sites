@@ -16,12 +16,12 @@ export default function Header() {
     <div>
       <header className="header">
         <div
-          className={`inner-container flex-row ${
+          className={`inner-container flex-row justify-between ${
             show ? "py-1 opacity-60" : ""
           } md:opacity-100`}
         >
           <img
-            src="app-icon.png"
+            src="images/app-icon.png"
             className={`site-icon rounded-[] bg-PRIMARY md:bg-transparent ${
               show ? "opacity-100" : "md:opacity-0"
             }`}
@@ -30,11 +30,11 @@ export default function Header() {
             <a href="/" className="app-link p-2">
               HOME
             </a>
-            {/* <a href="/about" className="app-link p-2">
-              ABOUT
-            </a> */}
             <a href="web-app" className="app-link p-2">
               WEB APP
+            </a>
+            <a href="/contact" className="app-link p-2">
+              CONTACT
             </a>
           </div>
         </div>

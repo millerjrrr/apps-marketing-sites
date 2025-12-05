@@ -11,6 +11,9 @@ export default function Footer() {
         </div>
         <div className="footer-block px-4 pt-3 text-left">
           <h2 className="pb-3">Useful Links</h2>
+          <a href="/contact" className="app-link p-2">
+            Contact
+          </a>
           <a href="/terms-and-conditions" className="app-link p-2">
             Terms & Conditions
           </a>

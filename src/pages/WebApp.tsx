@@ -17,7 +17,7 @@ export default function WebApp() {
             style={{ height, width }}
           >
             <img
-              src="iPhone_Static.png"
+              src="images/iPhone_Static.png"
               className="z-1 absolute"
               style={{ height, width }}
             />
