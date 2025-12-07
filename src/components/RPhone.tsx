@@ -153,6 +153,7 @@ const RotatingPhone: React.FC<RPhoneProps> = ({
     return screenshots.map((src) => {
       const tex = new THREE.TextureLoader().load(src);
       // tex.minFilter = THREE.LinearFilter;
+      tex.colorSpace = THREE.SRGBColorSpace;
       tex.magFilter = THREE.NearestFilter;
       tex.generateMipmaps = false;
       tex.wrapS = THREE.ClampToEdgeWrapping;
