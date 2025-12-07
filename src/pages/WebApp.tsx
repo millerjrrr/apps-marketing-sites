@@ -22,7 +22,7 @@ export default function WebApp() {
               style={{ height, width }}
             />
             <iframe
-              src="/web-app/index.html"
+              src="/app-specific/griddier/web-app/index.html"
               className="z-20 flex h-full w-full p-[29px] lg:z-50"
               style={{ borderRadius }}
             />
@@ -31,7 +31,7 @@ export default function WebApp() {
           <div className="flex h-screen w-full flex-col items-center">
             <div className="h-[50px]"></div>
             <iframe
-              src="/web-app/index.html"
+              src="/app-specific/griddier/web-app/index.html"
               className="flex w-full"
               style={{ height, maxWidth: width * 1.1 }}
             />

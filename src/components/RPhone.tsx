@@ -11,7 +11,7 @@ interface RPhoneProps {
 
 const RotatingPhone: React.FC<RPhoneProps> = ({
   name = "iPhone",
-  screenshots = ["screenshots/Trainer.jpg"],
+  screenshots = ["app-specific/griddier/screenshots/Trainer.jpg"],
 }) => {
   let source = "/models/iPhone.glb";
   let screenMeshName = "LLCOsMNMwTSiaFM_0";
@@ -285,7 +285,8 @@ export const RPhone: React.FC<RPhoneProps> = ({
   const position = new THREE.Vector3(0, 0, 3);
 
   const fileRoutes = screenshots.map(
-    (screenshotName) => `screenshots/${screenshotName}.jpg`,
+    (screenshotName) =>
+      `app-specific/griddier/screenshots/${screenshotName}.jpg`,
   );
 
   return (

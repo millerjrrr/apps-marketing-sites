@@ -21,7 +21,7 @@ export default function Header() {
           } md:opacity-100`}
         >
           <img
-            src="images/app-icon.png"
+            src="app-specific/griddier/icon.png"
             className={`site-icon rounded-[] bg-PRIMARY md:bg-transparent ${
               show ? "opacity-100" : "md:opacity-0"
             }`}
