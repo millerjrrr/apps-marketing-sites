@@ -1,13 +1,13 @@
-import siteContent from "../assets/siteContent";
+import { getSiteContent } from "../getSiteContent";
 
 export default function Footer() {
-  const { aboutUs, address } = siteContent.footer;
+  const { aboutUs, address } = getSiteContent().footer;
   return (
-    <footer className="flex:col flex w-full justify-center bg-PRIMARY">
+    <footer className="flex:col flex w-full justify-center bg-[var(--primary)]">
       <div className="inner-container flex flex-col md:flex-row">
         <div className="footer-block px-4 pt-3 text-left">
           <h2 className="pb-3">About Us</h2>
-          <p className="text-WHITE">{aboutUs}</p>
+          <p>{aboutUs}</p>
         </div>
         <div className="footer-block px-4 pt-3 text-left">
           <h2 className="pb-3">Useful Links</h2>
@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
         <div className="footer-block whitespace-pre-line px-4 pt-3 text-left">
           <h2 className="pb-3">Address</h2>
-          <p className="text-WHITE">{address}</p>
+          <p>{address}</p>
         </div>
       </div>
     </footer>

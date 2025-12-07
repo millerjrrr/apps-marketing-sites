@@ -1,9 +1,9 @@
-import siteContent from "../../assets/siteContent";
+import { getSiteContent } from "../../getSiteContent";
 import BadgeContainer from "../BadgeContainer";
 import RPhone from "../RPhone";
 
 const OpenBanner = () => {
-  const { title, subTitle, tagLine } = siteContent.home.openingBanner;
+  const { title, subTitle, tagLine } = getSiteContent().home.openingBanner;
 
   return (
     <div className="flex w-full flex-1 items-center justify-center">
@@ -16,7 +16,7 @@ const OpenBanner = () => {
           <BadgeContainer />
         </div>
         <div className="flex items-center justify-center overflow-x-hidden md:flex-row md:overflow-x-visible">
-          <div className="absolute z-0 h-[100px] w-[100px] rounded-full bg-TERTIARY opacity-100 blur-[120px] md:h-[600px] md:w-[600px] md:opacity-20"></div>
+          <div className="absolute z-0 h-[100px] w-[100px] rounded-full bg-[var(--tertiary)] opacity-100 blur-[120px] md:h-[600px] md:w-[600px] md:opacity-20"></div>
           <RPhone name="iPhone" />
         </div>
       </div>

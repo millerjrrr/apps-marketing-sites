@@ -1,7 +1,7 @@
 const PrivacyPolicyPage = () => {
   return (
     <div className="flex w-full flex-1 items-center justify-center">
-      <div className="inner-container opening-banner overflow-x-hidden rounded-[30px] bg-SECONDARY shadow-[0_0_10px_0_rgba(255,255,255,0.9)] md:overflow-x-visible">
+      <div className="inner-container opening-banner overflow-x-hidden rounded-[30px] bg-[var(--secondary)] shadow-[0_0_10px_0_rgba(255,255,255,0.9)] md:overflow-x-visible">
         <div className="privacy-container">
           <h1>Privacy Policy</h1>
           <p className="pb-5 pl-10">Effective Date: December 8, 2024</p>

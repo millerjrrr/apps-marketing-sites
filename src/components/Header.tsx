@@ -22,11 +22,11 @@ export default function Header() {
         >
           <img
             src="app-specific/griddier/icon.png"
-            className={`site-icon rounded-[] bg-PRIMARY md:bg-transparent ${
+            className={`site-icon rounded-[] bg-[var(--primary)] md:bg-transparent ${
               show ? "opacity-100" : "md:opacity-0"
             }`}
           />
-          <div className="flex translate-x-[8px] flex-row rounded-l-full border-2 border-r-0 border-TERTIARY bg-PRIMARY pl-2 md:border-0 md:bg-transparent">
+          <div className="flex translate-x-[8px] flex-row rounded-l-full border-2 border-r-0 border-[var(--tertiary)] bg-[var(--primary)] pl-2 md:border-0 md:bg-transparent">
             <a href="/" className="app-link p-2">
               HOME
             </a>
