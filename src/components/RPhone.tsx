@@ -2,7 +2,7 @@ import { Center, useGLTF } from "@react-three/drei";
 import { useFrame, Canvas } from "@react-three/fiber";
 import * as THREE from "three";
 import { useEffect, useRef, useState, useMemo } from "react";
-import { getSiteKey } from "../getSiteContent";
+import { getSiteContent, getSiteKey } from "../getSiteContent";
 import { a, useSpring } from "@react-spring/three";
 
 const siteKey = getSiteKey();
@@ -74,6 +74,15 @@ const RotatingPhone: React.FC<RPhoneProps> = ({
     root.position.z -= center.z;
 
     const screenMesh = clone.getObjectByName(screenMeshName) as THREE.Mesh;
+
+    if (name === "sPhone") {
+      const backMesh = clone.getObjectByName("Object_4") as THREE.Mesh;
+      backMesh.material = new THREE.MeshStandardMaterial({
+        color: new THREE.Color(getSiteContent().colors.CONTRAST),
+        roughness: 0.5,
+        metalness: 0.8,
+      });
+    }
 
     // VERY IMPORTANT: clone geometry before changing UVs
     screenMesh.geometry = screenMesh.geometry.clone();
