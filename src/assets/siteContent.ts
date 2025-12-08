@@ -215,7 +215,7 @@ const sites: SitesStructure = {
     colors: {
       PRIMARY: "#000000",
       SECONDARY: "#1b1b1b",
-      TERTIARY: "#979797ff",
+      TERTIARY: "#474747ff",
       CONTRAST: "#EEDFA4",
       CONTRAST_B: "#EEDFA4",
       CONTRAST_C: "#ffffff",

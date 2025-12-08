@@ -3,6 +3,7 @@ import { useFrame, Canvas } from "@react-three/fiber";
 import * as THREE from "three";
 import { useEffect, useRef, useState, useMemo } from "react";
 import { getSiteKey } from "../getSiteContent";
+import { a, useSpring } from "@react-spring/three";
 
 const siteKey = getSiteKey();
 
@@ -10,11 +11,13 @@ interface RPhoneProps {
   name: "iPhone" | "sPhone" | "gPhone-L" | "gPhone-R";
   screenshots?: string[];
   scale?: number;
+  onReady?: () => void;
 }
 
 const RotatingPhone: React.FC<RPhoneProps> = ({
   name = "iPhone",
   screenshots = [`app-specific/${siteKey}/screenshots/1.jpg`],
+  onReady,
 }) => {
   let source = "/models/iPhone.glb";
   let screenMeshName = "LLCOsMNMwTSiaFM_0";
@@ -32,9 +35,10 @@ const RotatingPhone: React.FC<RPhoneProps> = ({
   }
 
   const { scene } = useGLTF(source);
-  console.log(scene);
 
   const [renderPhone, setRenderPhone] = useState<THREE.Group | null>(null);
+
+  const [ready, setReady] = useState(false);
 
   const phoneRef = useRef<THREE.Group | null>(null);
   const uvAdjusted = useRef(false);
@@ -58,19 +62,16 @@ const RotatingPhone: React.FC<RPhoneProps> = ({
   useEffect(() => {
     const clone = scene.clone(true);
 
-    // FIX: recenter if necessary
-    if (name !== "iPhone") {
-      const root = clone.children[0]; // "Sketchfab_model"
+    const root = clone.children[0]; // "Sketchfab_model"
 
-      const box = new THREE.Box3().setFromObject(root);
-      const center = new THREE.Vector3();
-      box.getCenter(center);
+    const box = new THREE.Box3().setFromObject(root);
+    const center = new THREE.Vector3();
+    box.getCenter(center);
 
-      // Shift the whole model so its visual center becomes (0,0,0)
-      root.position.x -= center.x;
-      root.position.y -= center.y;
-      root.position.z -= center.z;
-    }
+    // Shift the whole model so its visual center becomes (0,0,0)
+    root.position.x -= center.x;
+    root.position.y -= center.y;
+    root.position.z -= center.z;
 
     const screenMesh = clone.getObjectByName(screenMeshName) as THREE.Mesh;
 
@@ -145,8 +146,10 @@ const RotatingPhone: React.FC<RPhoneProps> = ({
     phoneRef.current = clone; // mutable
     Promise.resolve().then(() => {
       setRenderPhone(clone);
+      setReady(true);
+      onReady?.();
     });
-  }, [name, scene, screenMeshName]);
+  }, [name, scene, screenMeshName, onReady]);
 
   // Load textures
   const textures = useMemo(() => {
@@ -265,11 +268,21 @@ const RotatingPhone: React.FC<RPhoneProps> = ({
     phoneRef.current.rotation.set(x, y, z);
   });
 
+  const { scale: springScale } = useSpring({
+    scale: ready ? scale : scale * 0.3,
+    config: {
+      mass: 1,
+      tension: 240, // higher → more overshoot
+      friction: 12, // lower → more bounce
+      clamp: false,
+    },
+  });
+
   return (
-    <Center key={renderPhone ? "ready" : "loading"}>
-      <group scale={scale}>
+    <Center key="ready">
+      <a.group scale={springScale}>
         {renderPhone && <primitive object={renderPhone} />}
-      </group>
+      </a.group>
     </Center>
   );
 };
@@ -279,6 +292,8 @@ export const RPhone: React.FC<RPhoneProps> = ({
   screenshots = ["1"],
   name,
 }) => {
+  const [ready, setReady] = useState(false);
+
   let width = Math.min(scale, window.innerWidth - 50);
   let height = width * 2.3;
   if (name === "gPhone-L" || name === "gPhone-R") {
@@ -298,15 +313,37 @@ export const RPhone: React.FC<RPhoneProps> = ({
       style={{
         width,
         height,
+        position: "relative",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
       }}
     >
+      {!ready && (
+        <div className="absolute flex flex-1 items-center justify-center">
+          <div className="animate-phoneShake relative h-[150px] w-full">
+            <img
+              src={`images/iPhone_Static.png`}
+              alt="loading phone"
+              className="z-2 h-full"
+            />
+            <img
+              src={fileRoutes[0]}
+              alt="loading phone"
+              className="z1 absolute top-0 h-full rounded-[12px] p-[7px]"
+            />
+          </div>
+        </div>
+      )}
+
       <Canvas camera={{ position }}>
         <ambientLight intensity={name === "iPhone" ? 0.7 : 10} />
         <directionalLight position={[5, 5, 5]} intensity={1} />
-        <RotatingPhone screenshots={fileRoutes} name={name} />
+        <RotatingPhone
+          screenshots={fileRoutes}
+          name={name}
+          onReady={() => setReady(true)}
+        />
       </Canvas>
     </div>
   );
