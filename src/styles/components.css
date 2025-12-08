@@ -1,0 +1,68 @@
+@layer components {
+  .site-icon {
+    @apply aspect-square w-12 rounded-[12px];
+    box-shadow: 0 0 5px 0 var(--contrast-c);
+  }
+
+  .app-link {
+    @apply cursor-pointer text-base transition-colors;
+    color: var(--contrast-c);
+  }
+
+  .app-link:hover {
+    @apply -translate-y-[3px] text-[16.2px];
+    color: var(--contrast);
+  }
+
+  .opening-banner {
+    @apply flex flex-col items-center lg:flex-row;
+  }
+
+  .footer-block {
+    @apply flex flex-1 flex-col items-start text-left;
+  }
+
+  .badge {
+    @apply h-[70px] p-1 lg:h-[90px] lg:p-3;
+  }
+
+  .badge-container {
+    @apply flex flex-col items-center justify-center pt-4 lg:flex-row lg:p-0;
+  }
+
+  .app-icon {
+    @apply m-5 aspect-square w-[200px] rounded-[50px] lg:w-[300px] lg:rounded-[75px];
+    box-shadow: 0 0 10px 0 var(--contrast-c);
+  }
+
+  .profile-image {
+    @apply aspect-square w-[200px] rounded-full border-[3px] object-cover;
+    border-color: var(--contrast);
+  }
+
+  .personal-detail {
+    @apply flex flex-row items-center p-2;
+    color: var(--contrast-c);
+  }
+
+  .t-and-c {
+    @apply mx-4 my-10 flex flex-1 flex-col rounded-[30px] bg-[var(--secondary)] p-3 md:mx-0 md:p-5;
+    box-shadow: 0 0 10px 0 var(--contrast-c);
+  }
+  .t-and-c-scroll-wrapper {
+    @apply flex h-[300px] flex-col rounded-[10px] bg-[var(--primary)] p-2;
+  }
+  .t-and-c-scroll {
+    @apply flex flex-1 flex-col overflow-y-scroll p-1;
+  }
+  .blog-card {
+    @apply card-shadow flex w-[250px] flex-col rounded-lg bg-[var(--primary)] p-4 md:w-[350px];
+  }
+  .blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 14px 2px var(--contrast-c);
+  }
+  .card-shadow {
+    box-shadow: 0 0 10px 0 var(--contrast-c);
+  }
+}

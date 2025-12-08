@@ -1,0 +1,51 @@
+@layer blog {
+  .prose br {
+    display: block;
+    margin-bottom: 1rem;
+    content: "";
+  }
+  .prose p {
+    margin-bottom: 1.2em;
+  }
+  .prose a {
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.2s ease;
+    color: var(--contrast);
+  }
+  .prose a:hover {
+    @apply -translate-y-[3px] text-[16.2px];
+    color: var(--contrast-c);
+  }
+  .prose h1 {
+    @apply py-5;
+  }
+  .prose h2 {
+    @apply py-2;
+  }
+  .prose ul {
+    color: var(--contrast-c);
+    padding-left: 1.25rem; /* indent */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose ul > li {
+    color: var(--contrast-c);
+    margin-bottom: 0.5rem;
+    padding-left: 0.25rem;
+    position: relative;
+  }
+
+  .prose ul li::before {
+    content: "•"; /* your icon here */
+    padding-right: 10px;
+    font-size: 1rem;
+  }
+
+  .prose ul > li::marker {
+    color: var(--contrast-c);
+    font-size: 1.1em;
+  }
+}

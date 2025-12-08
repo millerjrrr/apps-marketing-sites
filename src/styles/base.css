@@ -1,0 +1,50 @@
+@layer base {
+  body {
+    @apply max-w-full bg-gradient-to-b;
+    background-image: linear-gradient(
+      to bottom,
+      var(--primary),
+      var(--tertiary)
+    );
+  }
+
+  .content-container {
+    @apply mx-auto flex w-full max-w-full flex-1 flex-col;
+  }
+
+  header {
+    @apply fixed left-0 top-0 z-50 flex w-full max-w-full flex-row justify-center;
+  }
+  .header-filler {
+    @apply h-[60px];
+  }
+
+  .inner-container {
+    @apply flex w-full max-w-full p-2 font-bold lg:max-w-6xl lg:p-4;
+  }
+
+  h1 {
+    @apply inline-block cursor-pointer select-none text-center text-4xl font-bold md:text-5xl lg:text-6xl;
+    color: white;
+  }
+
+  h2 {
+    @apply inline-block cursor-pointer select-none text-center text-2xl font-bold lg:text-3xl;
+    color: white;
+  }
+
+  h3 {
+    @apply inline-block cursor-pointer select-none text-center text-lg font-bold lg:text-lg;
+    color: var(--contrast-b);
+  }
+
+  h4 {
+    @apply inline-block cursor-pointer select-none text-left text-xl font-bold lg:text-xl;
+    color: var(--contrast-c);
+  }
+
+  p {
+    @apply text-base;
+    color: var(--contrast-c);
+  }
+}
