@@ -20,7 +20,7 @@ const HeaderLink: React.FC<{ pageName: PageName }> = ({ pageName }) => {
 export default function Header() {
   const [show, setShow] = useState(false);
   const siteKey = getSiteKey();
-  const { pageNames } = getSiteContent();
+  let { pageNames } = getSiteContent();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,6 +30,9 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  if (window.innerWidth < 500 && pageNames.length > 3)
+    pageNames = pageNames.filter((name) => name !== "contact");
 
   return (
     <div>
