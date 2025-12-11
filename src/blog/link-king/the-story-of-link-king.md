@@ -3,7 +3,7 @@ title: "The Story of Link-King"
 slug: "the-story-of-link-king"
 date: "2024-12-20"
 category: "Progress Stories"
-thumbnail: "the-story-of-link-king.png"
+thumbnail: "the-story-of-link-king.jpg"
 featured: true
 excerpt: "How Link-King grew from a frustrating gap in language learning tools to a full-featured app built to help advanced learners thrive."
 tags:

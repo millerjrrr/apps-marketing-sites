@@ -3,7 +3,7 @@ title: "Learning Vocabulary in a New Language: Our Philosophy"
 slug: "learning-vocabulary-in-a-new-language"
 date: "2025-01-14"
 category: "Application"
-thumbnail: "learning-vocabulary-in-a-new-language.png"
+thumbnail: "learning-vocabulary-in-a-new-language.jpg"
 featured: false
 excerpt: "Vocabulary is the foundation of real fluency. Here’s why Link-King prioritizes vocabulary first, and how it transforms your ability to understand and use a new language."
 tags:

@@ -3,7 +3,7 @@ title: "Spaced Repetition: Link-King Won’t Let You Forget"
 slug: "spaced-repetition"
 date: "2025-01-13"
 category: "Technology"
-thumbnail: "spaced-repetition.png"
+thumbnail: "spaced-repetition.jpg"
 featured: false
 excerpt: "Forget forgetting. Link-King uses structured spaced repetition to make sure the words you learn actually stay in your memory long-term."
 tags:

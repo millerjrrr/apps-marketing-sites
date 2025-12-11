@@ -3,7 +3,7 @@ title: "Fake Language Learning: Why Appearing Fluent Isn't the Same as Being Flu
 slug: "fake-language-learning"
 date: "2025-01-12"
 category: "Philosophy"
-thumbnail: "language-faker.png"
+thumbnail: "language-faker.jpg"
 featured: false
 excerpt: "Many learners focus on advanced grammar to appear fluent — but does it actually help? Here's why 'fake language learning' holds you back."
 tags:

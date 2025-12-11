@@ -3,7 +3,7 @@ title: "My Language Learning Story"
 slug: "my-language-learning-story"
 date: "2024-12-20"
 category: "Progress Stories"
-thumbnail: "my-language-learning-story.webp"
+thumbnail: "my-language-learning-story.jpg"
 featured: true
 excerpt: "My Language Learning Story: How I Went from Basic Words to Fluent in Portuguese"
 tags:

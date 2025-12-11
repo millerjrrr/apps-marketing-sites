@@ -3,7 +3,7 @@ title: "Unlocking Fluency: A Vocabulary-First Language Learning App"
 slug: "unlocking-fluency"
 date: "2025-01-12"
 category: "Philosophy"
-thumbnail: "unlocking-fluency.png"
+thumbnail: "unlocking-fluency.jpg"
 featured: false
 excerpt: "Why Link-King focuses on vocabulary first and how this approach helps advanced learners unlock true fluency."
 tags:

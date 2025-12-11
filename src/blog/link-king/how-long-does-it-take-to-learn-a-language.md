@@ -3,7 +3,7 @@ title: "How Long Does It Take to Learn a Language?"
 slug: "how-long-does-it-take-to-learn-a-language"
 date: "2024-12-20"
 category: "Trivia"
-thumbnail: "how-long-does-it-take-to-learn-a-language.png"
+thumbnail: "how-long-does-it-take-to-learn-a-language.jpg"
 featured: false
 excerpt: "A realistic breakdown of how long it really takes to learn a language, what fluency levels actually mean, and why total hours matter more than years."
 tags:

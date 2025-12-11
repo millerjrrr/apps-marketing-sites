@@ -3,7 +3,7 @@ title: "Effective Language Learning: Why Drills Are So Important"
 slug: "effective-language-learning-drills"
 date: "2024-12-20"
 category: "Philosophy"
-thumbnail: "effective-language-learning.png"
+thumbnail: "effective-language-learning.jpg"
 featured: false
 excerpt: "Why structured drilling beats passive immersion and how Link-King makes language learning dramatically more effective."
 tags:

@@ -3,7 +3,7 @@ title: "What is an Elo Rating?"
 slug: "what-is-an-elo-rating"
 date: "2025-01-17"
 category: "Technology"
-thumbnail: "elo-rating.png"
+thumbnail: "elo-rating.jpg"
 featured: false
 excerpt: "Elo ratings rank players by performance, adjusting dynamically after every win and loss. Here's how this powerful system enhances Link-King’s personalized vocabulary training."
 tags:

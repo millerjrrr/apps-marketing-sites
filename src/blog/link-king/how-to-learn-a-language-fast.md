@@ -3,7 +3,7 @@ title: "How to Learn a Language Fast – The Truth Behind the Myths"
 slug: "how-to-learn-a-language-fast"
 date: "2025-01-16"
 category: "Progress Stories"
-thumbnail: "learn-a-language-fast.webp"
+thumbnail: "learn-a-language-fast.jpg"
 featured: false
 excerpt: "Everyone says to 'speak from day one' if you want to learn a language fast — but that advice might be slowing you down. Here’s the real path to rapid progress."
 tags:

@@ -3,7 +3,7 @@ title: "Introducing AI Stories"
 slug: "introducing-ai-stories"
 date: "2025-01-15"
 category: "Technology"
-thumbnail: "AI-Stories.png"
+thumbnail: "AI-Stories.jpg"
 featured: false
 excerpt: "AI Stories transforms your learned vocabulary into personalized stories that boost confidence, reinforce memory, and make language learning genuinely fun."
 tags:

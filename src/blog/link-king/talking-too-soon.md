@@ -3,7 +3,7 @@ title: "Talking Too Soon: Why We Should Listen First and Talk Later"
 slug: "talking-too-soon"
 date: "2025-01-10"
 category: "Philosophy"
-thumbnail: "talking-too-soon.png"
+thumbnail: "talking-too-soon.jpg"
 featured: false
 excerpt: "Why listening is the foundation of language learning and why talking too soon creates the illusion of progress instead of real ability."
 tags:
