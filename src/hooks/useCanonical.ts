@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import sites from "../assets/siteContent";
 
 const CANONICAL_HOSTS = new Set(
@@ -6,9 +7,10 @@ const CANONICAL_HOSTS = new Set(
     .map((site) => site.canonicalDomain)
     .filter(Boolean),
 );
-console.log(CANONICAL_HOSTS);
 
 export function useCanonical() {
+  const location = useLocation();
+
   useEffect(() => {
     const host = window.location.hostname;
 
@@ -17,7 +19,7 @@ export function useCanonical() {
       return;
     }
 
-    const canonicalUrl = `https://${host}` + window.location.pathname;
+    const canonicalUrl = `https://${host}` + location.pathname;
 
     let link = document.querySelector(
       'link[rel="canonical"]',
@@ -30,5 +32,5 @@ export function useCanonical() {
     }
 
     link.href = canonicalUrl;
-  }, []);
+  });
 }
