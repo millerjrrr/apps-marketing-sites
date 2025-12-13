@@ -58,6 +58,10 @@ const griddier: ContentStructure = {
         q: "How much will Griddier cost after the launch phase?",
         a: "Griddier should be as affordable as it is powerful! We plan to launch at $20 a year!",
       },
+      {
+        q: "What do the stars mean?",
+        a: "The stars represent your mastery level for that range. The higher the level, the better you know it. This is based on structured spaced repetition (see the FAQ above). Ranges you know well appear less often. If you get a range wrong, it is demoted to level 0 and the repetition cycle starts again from the beginning.",
+      },
     ],
   },
   contact: {
