@@ -1,25 +1,19 @@
+import { Buffer } from "buffer";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./index.css";
 import { BrowserRouter } from "react-router-dom";
-import { getSiteContent, getSiteKey } from "./getSiteContent";
-import { Buffer } from "buffer";
+import App from "./App";
+import { getSiteContent } from "./getSiteContent";
+import "./index.css";
 
 window.Buffer = Buffer;
 
 const site = getSiteContent();
-const siteKey = getSiteKey();
 
 // Inject theme vars before rendering
 const root = document.documentElement;
 
 document.title = site.meta.title;
-
-const favicon = document.querySelector("link[rel='icon']") as HTMLLinkElement;
-if (favicon) {
-  favicon.href = `/app-specific/${siteKey}/favicon.ico`;
-}
 
 document
   .querySelector("meta[name='description']")

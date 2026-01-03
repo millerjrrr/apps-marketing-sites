@@ -7,6 +7,17 @@ export async function onRequest(context) {
 
   // Detect static assets early and skip modification
   const pathname = url.pathname;
+
+  if (pathname === "/favicon.ico") {
+    const key = host.split(".")[0].toLowerCase();
+    const tenant = metaConfig[key] ? key : "link-king";
+
+    return fetch(
+      new URL(`/app-specific/${tenant}/favicon.ico`, request.url),
+      request,
+    );
+  }
+
   const isStaticAsset = pathname.match(
     /\.(png|jpg|jpeg|webp|gif|svg|ico|js|css|json|txt|woff2?|ttf)$/i,
   );

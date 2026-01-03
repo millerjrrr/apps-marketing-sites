@@ -57,6 +57,9 @@ export interface ContentStructure {
     CONTRAST_B: `#${string}`;
     CONTRAST_C: `#${string}`;
   };
+  toolsPage?:{
+    title:"Download our free Rng"
+  }
 }
 
 export interface SitesStructure {
