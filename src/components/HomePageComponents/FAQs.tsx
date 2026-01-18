@@ -34,7 +34,7 @@ export default function FAQs() {
   const { FAQ } = getSiteContent().home;
 
   return (
-    <div className="flex:col flex w-full justify-center bg-[var(--secondary)] py-10">
+    <div className="flex:col flex w-full justify-center bg-[color-mix(in_srgb,var(--secondary)_60%,transparent)] bg-opacity-50 py-10">
       <div className="inner-container justify-left flex flex-col">
         <h2 className="pb-3 lg:text-left">FAQs</h2>
         {FAQ.map((faq: FaqType) => (

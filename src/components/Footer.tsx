@@ -3,7 +3,7 @@ import { getSiteContent } from "../getSiteContent";
 export default function Footer() {
   const { aboutUs, address } = getSiteContent().footer;
   return (
-    <footer className="flex:col flex w-full justify-center bg-[var(--primary)]">
+    <footer className="flex:col flex w-full justify-center bg-[color-mix(in_srgb,var(--primary)_60%,transparent)]">
       <div className="inner-container flex flex-col md:flex-row">
         <div className="footer-block px-4 pt-3 text-left">
           <h2 className="pb-3">About Us</h2>

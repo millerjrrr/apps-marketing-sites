@@ -9,12 +9,14 @@ import PolicyPage from "./pages/PolicyPage";
 import BlogHome from "./pages/BlogHome";
 import BlogPost from "./pages/BlogPost";
 import { useCanonical } from "./hooks/useCanonical";
+import ParallaxOverlay from "./components/ParallaxOverlay";
 
 export default function App() {
   useCanonical();
 
   return (
-    <div className="flex min-h-screen w-full flex-col">
+    <div className="relative flex min-h-screen w-full flex-col">
+      <ParallaxOverlay />
       <Header />
       <main className="content-container">
         <Routes>

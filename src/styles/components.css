@@ -48,11 +48,11 @@
   }
 
   .t-and-c {
-    @apply mx-4 my-10 flex flex-1 flex-col rounded-[30px] bg-[var(--secondary)] p-3 md:mx-0 md:p-5;
+    @apply mx-4 my-10 flex flex-1 flex-col rounded-[30px] bg-[color-mix(in_srgb,var(--secondary)_60%,transparent)] p-3 md:mx-0 md:p-5;
     box-shadow: 0 0 10px 0 var(--contrast-c);
   }
   .t-and-c-scroll-wrapper {
-    @apply flex h-[300px] flex-col rounded-[10px] bg-[var(--primary)] p-2;
+    @apply flex h-[300px] flex-col rounded-[10px] bg-[color-mix(in_srgb,var(--primary)_60%,transparent)] p-2;
   }
   .t-and-c-scroll {
     @apply flex flex-1 flex-col overflow-y-scroll p-1;
