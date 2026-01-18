@@ -1,7 +1,7 @@
 import type { SiteKey } from "./assets/interface";
 import sites from "./assets/siteContent";
 
-const defaultSite = "griddier";
+const defaultSite = "link-king";
 
 export function getSiteContent() {
   const host = window.location.hostname.toLowerCase().split(".")[0];

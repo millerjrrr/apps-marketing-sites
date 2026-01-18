@@ -330,7 +330,7 @@ export const RPhone: React.FC<RPhoneProps> = ({
     >
       {!ready && (
         <div className="absolute flex flex-1 items-center justify-center">
-          <div className="animate-phoneShake relative h-[150px] w-full">
+          <div className="relative h-[600px] w-full animate-pulseScale">
             <img
               src={`images/iPhone_Static.png`}
               alt="loading phone"
@@ -339,12 +339,11 @@ export const RPhone: React.FC<RPhoneProps> = ({
             <img
               src={fileRoutes[0]}
               alt="loading phone"
-              className="z1 absolute top-0 h-full rounded-[12px] p-[7px]"
+              className="z1 absolute top-0 h-full rounded-[64px] p-[26px]"
             />
           </div>
         </div>
       )}
-
       <Canvas camera={{ position }}>
         <ambientLight intensity={name === "iPhone" ? 0.7 : 10} />
         <directionalLight position={[5, 5, 5]} intensity={1} />

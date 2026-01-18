@@ -23,7 +23,7 @@ export default {
       animation: {
         pulseScale: "pulseScale 2s ease-in-out infinite",
         flyInRight: "flyInRight 0.6s ease-out forwards",
-        phoneShake: "phoneShake 0.25s linear infinite",
+        phoneShake: "phoneShake 1s linear infinite",
       },
       boxShadow: {
         white: "0 0 5px rgba(255, 255, 255, 0.6)",
