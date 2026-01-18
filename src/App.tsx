@@ -10,13 +10,15 @@ import BlogHome from "./pages/BlogHome";
 import BlogPost from "./pages/BlogPost";
 import { useCanonical } from "./hooks/useCanonical";
 import ParallaxOverlay from "./components/ParallaxOverlay";
+import { getSiteKey } from "./getSiteContent";
 
 export default function App() {
   useCanonical();
+  const key = getSiteKey();
 
   return (
     <div className="relative flex min-h-screen w-full flex-col">
-      <ParallaxOverlay />
+      {key !== "banana-cards" && <ParallaxOverlay />}
       <Header />
       <main className="content-container">
         <Routes>
