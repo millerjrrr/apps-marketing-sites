@@ -67151,7 +67151,7 @@ __d(
 __d(
   function (g, r, i, a, m, e, d) {
     m.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/AntDesign.3f78af31cca60105799838a1a7a59fbd.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/AntDesign.3f78af31cca60105799838a1a7a59fbd.ttf";
   },
   486,
   [],
@@ -67637,7 +67637,7 @@ __d(
 __d(
   function (g, r, i, a, m, e, d) {
     m.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/Entypo.31b5ffea3daddc69dd01a1f3d6cf63c5.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/Entypo.31b5ffea3daddc69dd01a1f3d6cf63c5.ttf";
   },
   489,
   [],
@@ -68085,7 +68085,7 @@ __d(
 __d(
   function (g, r, i, a, m, e, d) {
     m.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/EvilIcons.140c53a7643ea949007aa9a282153849.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/EvilIcons.140c53a7643ea949007aa9a282153849.ttf";
   },
   492,
   [],
@@ -68192,7 +68192,7 @@ __d(
 __d(
   function (g, r, i, a, m, e, d) {
     m.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/Feather.ca4b48e04dc1ce10bfbddb262c8b835f.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/Feather.ca4b48e04dc1ce10bfbddb262c8b835f.ttf";
   },
   495,
   [],
@@ -68516,7 +68516,7 @@ __d(
 __d(
   function (o, e, t, c, a, n, s) {
     a.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/Fontisto.b49ae8ab2dbccb02c4d11caaacf09eab.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/Fontisto.b49ae8ab2dbccb02c4d11caaacf09eab.ttf";
   },
   498,
   [],
@@ -69170,7 +69170,7 @@ __d(
 __d(
   function (e, o, t, n, s, c, d) {
     s.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/FontAwesome.b06871f281fee6b241d60582ae9369b9.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/FontAwesome.b06871f281fee6b241d60582ae9369b9.ttf";
   },
   501,
   [],
@@ -73268,7 +73268,7 @@ __d(
 __d(
   function (g, r, i, a, m, e, d) {
     m.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/FontAwesome5_Regular.1f77739ca9ff2188b539c36f30ffa2be.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/FontAwesome5_Regular.1f77739ca9ff2188b539c36f30ffa2be.ttf";
   },
   508,
   [],
@@ -73276,7 +73276,7 @@ __d(
 __d(
   function (e, o, d, t, n, s, c) {
     n.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/FontAwesome5_Solid.605ed7926cf39a2ad5ec2d1f9d391d3d.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/FontAwesome5_Solid.605ed7926cf39a2ad5ec2d1f9d391d3d.ttf";
   },
   509,
   [],
@@ -73284,7 +73284,7 @@ __d(
 __d(
   function (g, r, i, a, m, e, d) {
     m.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/FontAwesome5_Brands.3b89dd103490708d19a95adcae52210e.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/FontAwesome5_Brands.3b89dd103490708d19a95adcae52210e.ttf";
   },
   510,
   [],
@@ -77983,7 +77983,7 @@ __d(
 __d(
   function (g, r, i, a, m, e, d) {
     m.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/FontAwesome6_Regular.370dd5af19f8364907b6e2c41f45dbbf.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/FontAwesome6_Regular.370dd5af19f8364907b6e2c41f45dbbf.ttf";
   },
   515,
   [],
@@ -77991,7 +77991,7 @@ __d(
 __d(
   function (e, o, t, c, d, n, s) {
     d.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/FontAwesome6_Solid.adec7d6f310bc577f05e8fe06a5daccf.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/FontAwesome6_Solid.adec7d6f310bc577f05e8fe06a5daccf.ttf";
   },
   516,
   [],
@@ -77999,7 +77999,7 @@ __d(
 __d(
   function (e, o, t, n, s, c, d) {
     s.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/FontAwesome6_Brands.56c8d80832e37783f12c05db7c8849e2.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/FontAwesome6_Brands.56c8d80832e37783f12c05db7c8849e2.ttf";
   },
   517,
   [],
@@ -78028,7 +78028,7 @@ __d(
 __d(
   function (g, r, i, a, m, e, d) {
     m.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/Foundation.e20945d7c929279ef7a6f1db184a4470.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/Foundation.e20945d7c929279ef7a6f1db184a4470.ttf";
   },
   519,
   [],
@@ -78348,7 +78348,7 @@ __d(
 __d(
   function (o, e, n, t, d, s, c) {
     d.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/Ionicons.b4eb097d35f44ed943676fd56f6bdc51.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/Ionicons.b4eb097d35f44ed943676fd56f6bdc51.ttf";
   },
   522,
   [],
@@ -79742,7 +79742,7 @@ __d(
 __d(
   function (e, o, t, n, s, a, c) {
     s.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/MaterialCommunityIcons.6e435534bd35da5fef04168860a9b8fa.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/MaterialCommunityIcons.6e435534bd35da5fef04168860a9b8fa.ttf";
   },
   525,
   [],
@@ -87227,7 +87227,7 @@ __d(
 __d(
   function (e, c, o, t, n, s, i) {
     n.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/MaterialIcons.4e85bc9ebe07e0340c9c4fc2f6c38908.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/MaterialIcons.4e85bc9ebe07e0340c9c4fc2f6c38908.ttf";
   },
   528,
   [],
@@ -89498,7 +89498,7 @@ __d(
 __d(
   function (g, r, i, a, m, e, d) {
     m.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/Octicons.871378c6eab492a3e689a9385dc45a12.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/Octicons.871378c6eab492a3e689a9385dc45a12.ttf";
   },
   531,
   [],
@@ -89866,7 +89866,7 @@ __d(
 __d(
   function (g, r, i, a, m, e, d) {
     m.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/SimpleLineIcons.d2285965fe34b05465047401b8595dd0.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/SimpleLineIcons.d2285965fe34b05465047401b8595dd0.ttf";
   },
   534,
   [],
@@ -90092,7 +90092,7 @@ __d(
 __d(
   function (g, r, i, a, m, e, d) {
     m.exports =
-      "/app-specific/griddier/web-app/assets/node_icons/Zocial.1681f34aaca71b8dfb70756bca331eb2.ttf";
+      "/app-specific/griddier/web-app/assets/node-icons/Zocial.1681f34aaca71b8dfb70756bca331eb2.ttf";
   },
   537,
   [],
@@ -110336,7 +110336,7 @@ __d(
 __d(
   function (g, r, i, a, m, e, d) {
     m.exports = {
-      uri: "/app-specific/griddier/web-app/assets/node_icons/back-icon.35ba0eaec5a4f5ed12ca16fabeae451d.png",
+      uri: "/app-specific/griddier/web-app/assets/node-icons/back-icon.35ba0eaec5a4f5ed12ca16fabeae451d.png",
       width: 96,
       height: 96,
     };
@@ -110347,7 +110347,7 @@ __d(
 __d(
   function (g, r, i, a, m, e, d) {
     m.exports = {
-      uri: "/app-specific/griddier/web-app/assets/node_icons/back-icon-mask.0a328cd9c1afd0afe8e3b1ec5165b1b4.png",
+      uri: "/app-specific/griddier/web-app/assets/node-icons/back-icon-mask.0a328cd9c1afd0afe8e3b1ec5165b1b4.png",
       width: 50,
       height: 85,
     };
@@ -110358,7 +110358,7 @@ __d(
 __d(
   function (g, r, i, a, m, e, d) {
     m.exports = {
-      uri: "/app-specific/griddier/web-app/assets/node_icons/clear-icon.c94f6478e7ae0cdd9f15de1fcb9e5e55.png",
+      uri: "/app-specific/griddier/web-app/assets/node-icons/clear-icon.c94f6478e7ae0cdd9f15de1fcb9e5e55.png",
       width: 64,
       height: 64,
     };
@@ -110369,7 +110369,7 @@ __d(
 __d(
   function (g, r, i, a, m, e, d) {
     m.exports = {
-      uri: "/app-specific/griddier/web-app/assets/node_icons/close-icon.808e1b1b9b53114ec2838071a7e6daa7.png",
+      uri: "/app-specific/griddier/web-app/assets/node-icons/close-icon.808e1b1b9b53114ec2838071a7e6daa7.png",
       width: 96,
       height: 96,
     };
@@ -110380,7 +110380,7 @@ __d(
 __d(
   function (g, r, i, a, m, e, d) {
     m.exports = {
-      uri: "/app-specific/griddier/web-app/assets/node_icons/search-icon.286d67d3f74808a60a78d3ebf1a5fb57.png",
+      uri: "/app-specific/griddier/web-app/assets/node-icons/search-icon.286d67d3f74808a60a78d3ebf1a5fb57.png",
       width: 96,
       height: 96,
     };
