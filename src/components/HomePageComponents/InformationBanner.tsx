@@ -32,7 +32,7 @@ const InformationBanner = () => {
     getSiteContent().home.informationBanner;
 
   return (
-    <div className="flex w-full flex-1 items-center justify-center border-b-2 border-t-2 border-[color-mix(in_srgb,var(--tertiary)_60%,transparent)]">
+    <div className="flex w-full flex-1 items-center justify-center">
       <div className="absolute z-0 h-[20px] w-full rounded-full bg-[var(--contrast-c)] opacity-100 blur-[100px]"></div>
       <div className="inner-container flex-col overflow-x-hidden lg:flex-row lg:overflow-x-visible">
         <div className="order-1 flex items-center lg:order-2">

@@ -11,34 +11,63 @@ import BlogPost from "./pages/BlogPost";
 import { useCanonical } from "./hooks/useCanonical";
 import ParallaxOverlay from "./components/ParallaxOverlay";
 import { getSiteKey } from "./getSiteContent";
+import { useEffect, useState } from "react";
+import Loader from "./components/Loader";
+import waitForImages from "./utils/waitForImages";
 
 export default function App() {
   useCanonical();
   const key = getSiteKey();
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const run = async () => {
+      await waitForImages();
+      if (!cancelled) {
+        setLoading(false);
+      }
+    };
+
+    run();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = loading ? "hidden" : "";
+  }, [loading]);
+
   return (
-    <div className="relative flex min-h-screen w-full flex-col">
-      {key !== "banana-cards" && <ParallaxOverlay />}
-      <Header />
-      <main className="content-container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/mobile-app" element={<WebApp />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route
-            path="/privacy-policy"
-            element={<PolicyPage type="privacyPolicy" />}
-          />
-          <Route
-            path="/terms-and-conditions"
-            element={<PolicyPage type="termsAndConditions" />}
-          />
-          <Route path="/blog" element={<BlogHome />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-        </Routes>
-      </main>
-      <Footer />
-    </div>
+    <>
+      <Loader visible={loading} />
+      <div className="relative flex min-h-screen w-full flex-col">
+        {key !== "banana-cards" && <ParallaxOverlay />}
+        <Header />
+        <main className="content-container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/mobile-app" element={<WebApp />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route
+              path="/privacy-policy"
+              element={<PolicyPage type="privacyPolicy" />}
+            />
+            <Route
+              path="/terms-and-conditions"
+              element={<PolicyPage type="termsAndConditions" />}
+            />
+            <Route path="/blog" element={<BlogHome />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
