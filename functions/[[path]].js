@@ -18,6 +18,16 @@ export async function onRequest(context) {
     );
   }
 
+   if (pathname === "/favicon.png") {
+    const key = host.split(".")[0].toLowerCase();
+    const tenant = metaConfig[key] ? key : "link-king";
+
+    return fetch(
+      new URL(`/app-specific/${tenant}/icon.png`, request.url),
+      request,
+    );
+  }
+
   const isStaticAsset = pathname.match(
     /\.(png|jpg|jpeg|webp|gif|svg|ico|js|css|json|txt|woff2?|ttf)$/i,
   );
