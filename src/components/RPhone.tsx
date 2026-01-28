@@ -145,7 +145,7 @@ const RotatingPhone: React.FC<RPhoneProps> = ({
           const x = uv.getX(i);
           uv.setX(i, 0.5 + (x - 0.5) * 1.2);
           const y = uv.getY(i);
-          uv.setY(i, 0.5 + (y - 0.5) * 1.1);
+          uv.setY(i, 0.5 + (y - 0.52) * 1.15);
         }
         uv.needsUpdate = true;
         uvAdjusted.current = true;
