@@ -27,7 +27,7 @@ export default function WebApp() {
             />
             <iframe
               src={`/app-specific/${siteKey}/web-app/index.html`}
-              className="z-20 flex h-full min-h-0 w-full overflow-auto p-[29px] lg:z-50"
+              className="z-20 flex h-full min-h-0 w-full overflow-auto p-[8%] lg:z-50"
               style={{ borderRadius, border: "none" }}
             />
           </div>
