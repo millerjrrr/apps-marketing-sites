@@ -15,7 +15,7 @@ export default function BlogPost() {
     <div className="flex w-full flex-1 flex-col items-center justify-center">
       <div className="header-filler" />
       <div className="inner-container p-4">
-        <div className="card-shadow items-center rounded-[15px] bg-[var(--primary)] p-10">
+        <div className="card-shadow items-center rounded-[15px] bg-[color-mix(in_srgb,var(--primary)_60%,transparent)] p-10">
           {post.thumbnail && (
             <img
               src={`/app-specific/${siteKey}/thumbnails/${post.thumbnail}`}
