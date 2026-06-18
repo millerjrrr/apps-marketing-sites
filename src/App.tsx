@@ -14,6 +14,8 @@ import { getSiteKey } from "./getSiteContent";
 import { useEffect, useState } from "react";
 import Loader from "./components/Loader";
 import waitForImages from "./utils/waitForImages";
+import Tools from "./pages/Tools";
+import GriddierFlopStraightCounterGame from "./components/GriddierFlopStraightCounterGame";
 
 export default function App() {
   useCanonical();
@@ -64,6 +66,11 @@ export default function App() {
             />
             <Route path="/blog" element={<BlogHome />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/tools" element={<Tools />} />
+            <Route
+              path="/tools/flop-straight-counter-game"
+              element={<GriddierFlopStraightCounterGame />}
+            />
           </Routes>
         </main>
         <Footer />

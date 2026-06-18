@@ -9,7 +9,7 @@ const griddier: ContentStructure = {
     description:
       "A mobile app designed to help skilled poker players optimize their preflop play",
   },
-  pageNames: ["home", "web-app", "contact"],
+  pageNames: ["home", "web-app", "tools", "contact"],
   footer: {
     aboutUs:
       "Griddier is a poker training app built to help serious players sharpen their preflop game with speed and confidence.",
@@ -69,6 +69,7 @@ const griddier: ContentStructure = {
     description:
       "Hi, I'm Jacob, professional poker player since 2018, amateur software developer and the creator of Griddier.\n\nGriddier is a simple but powerful app that has allowed me and now others to memorize complex preflop grids. Perfectly!",
   },
+
   termsAndConditions: {
     description:
       "Griddier is a poker training app owned and managed by Jacob Miller. By using the app, you agree to the following terms.",

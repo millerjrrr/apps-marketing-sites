@@ -1,4 +1,4 @@
-export type PageName = "home" | "web-app" | "contact" | "blog";
+export type PageName = "home" | "web-app" |"tools"| "contact" | "blog";
 
 export interface Bullet {
   title: string;
