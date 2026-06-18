@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import rawData from "./data/questions.json";
+import rawData from "./data/Questions.json";
 import type { Question } from "./types/Question";
 import { answerMap, colorMap } from "./data/answerMap";
 
