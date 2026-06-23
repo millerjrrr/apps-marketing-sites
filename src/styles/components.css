@@ -67,4 +67,19 @@
   .card-shadow {
     box-shadow: 0 0 10px 0 var(--contrast-c);
   }
+
+  .app-button {
+  background-color: var(--secondary);
+  border-color: var(--primary);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50px;
+  color: var(--contrast-c);
+  box-shadow: 0 0 4px var(--contrast-c);
+}
+.app-button:hover {
+  box-shadow: 0 0 8px var(--contrast-c);
+  background-color: var(--primary);
+  transform: translateY(-1px);
+}
 }

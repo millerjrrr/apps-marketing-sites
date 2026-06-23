@@ -17,6 +17,11 @@ const Tools = () => {
               Flop Straight Counter Training Game
             </a>
           </div>
+          <div className="personal-detail app-link">
+            <a href="/tools/griddier-ranges-manager" target="_blank">
+              Griddier Ranges Manager
+            </a>
+          </div>
         </div>
       </div>
     )

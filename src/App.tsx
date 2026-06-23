@@ -15,7 +15,8 @@ import { useEffect, useState } from "react";
 import Loader from "./components/Loader";
 import waitForImages from "./utils/waitForImages";
 import Tools from "./pages/Tools";
-import GriddierFlopStraightCounterGame from "./components/GriddierFlopStraightCounterGame";
+import GriddierFlopStraightCounterGame from "./components/AppSpecificComponents/Griddier/GriddierFlopStraightCounterGame";
+import GriddierRangeManager from "./components/AppSpecificComponents/Griddier/griddier-range-manager/RangeManager";
 
 export default function App() {
   useCanonical();
@@ -70,6 +71,10 @@ export default function App() {
             <Route
               path="/tools/flop-straight-counter-game"
               element={<GriddierFlopStraightCounterGame />}
+            />
+            <Route
+              path="/tools/griddier-ranges-manager"
+              element={<GriddierRangeManager />}
             />
           </Routes>
         </main>
