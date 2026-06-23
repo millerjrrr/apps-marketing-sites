@@ -2,7 +2,7 @@ import { setHandAction } from "../../store/rangeSlice";
 import AppButton from "./AppButton";
 import ButtonsRowContainer from "./ButtonsRowContainer";
 import { useDispatch, useSelector } from "react-redux";
-import type { RootState } from "@react-three/fiber";
+import type { RootState } from "../../store";
 import {
   createRangeFromWizard,
   isWizardRange,

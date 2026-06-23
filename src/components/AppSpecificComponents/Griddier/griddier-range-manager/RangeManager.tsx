@@ -1,6 +1,5 @@
 import { useState } from "react";
 import GriddierRangeBuilder from "./range-builder/RangeBuilder";
-import colors from "./range-builder/utils/colors";
 import RangeList from "./range-list/RangeList";
 import AppButton from "./range-builder/components/Buttons/AppButton";
 import { List } from "lucide-react";
