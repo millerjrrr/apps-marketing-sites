@@ -1,4 +1,4 @@
-import { handsArray } from "../../types";
+import { handsArray, type Hand } from "../../types";
 import AppButton from "./AppButton";
 import {
   setFeaturedHands,
@@ -21,7 +21,7 @@ const PasteRaiseAsPrior = () => {
       const lines = text.trim().split("\n");
       // Ignore header
       const dataLines = lines.slice(1);
-      const newFeatureHands = [];
+      const newFeatureHands:Hand[]= [];
 
       await dataLines.forEach((line) => {
         const [hand, , raiseStr] = line.split("\t");

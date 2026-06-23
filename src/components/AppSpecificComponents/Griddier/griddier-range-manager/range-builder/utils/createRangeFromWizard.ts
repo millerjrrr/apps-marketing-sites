@@ -1,7 +1,7 @@
 const pattern =
   /^(\s*[2-9TJQKA][cdhs][2-9TJQKA][cdhs]\s*:\s*\d+(\.\d+)?)(\s*,\s*[2-9TJQKA][cdhs][2-9TJQKA][cdhs]\s*:\s*\d+(\.\d+)?)*$/;
 
-export const isWizardRange = (str) => {
+export const isWizardRange = (str:string) => {
   return pattern.test(str);
 };
 
