@@ -87,6 +87,7 @@ export interface SimpleSiteContentStructure {
       subTitle: string;
       tagLine: string;
     };
+    videoPromotion?: string;
     FAQ: { q: `${string}?`; a: string }[];
   };
   contact: {
