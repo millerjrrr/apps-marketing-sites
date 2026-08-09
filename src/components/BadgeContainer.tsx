@@ -1,7 +1,12 @@
 import { getSiteContent } from "../getSiteContent";
 
 const BadgeContainer: React.FC<{ left?: boolean }> = ({ left }) => {
-  const { appStore, playStore } = getSiteContent();
+  const site = getSiteContent();
+
+  if (!site || !site.appMarketingSite) return null;
+
+  const siteAny = site as any;
+  const { appStore, playStore } = siteAny;
 
   return (
     <div className={`badge-container w-full ${left ? "lg:align-left" : ""}`}>

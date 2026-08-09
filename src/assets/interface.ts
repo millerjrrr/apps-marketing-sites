@@ -1,4 +1,10 @@
-export type PageName = "home" | "web-app" |"tools"| "contact" | "blog";
+export type PageName =
+  | "home"
+  | "web-app"
+  | "tools"
+  | "test"
+  | "contact"
+  | "blog";
 
 export interface Bullet {
   title: string;
@@ -6,6 +12,7 @@ export interface Bullet {
 }
 
 export interface ContentStructure {
+  appMarketingSite: boolean;
   canonicalDomain: string;
   appStore: string;
   playStore: string;
@@ -57,15 +64,58 @@ export interface ContentStructure {
     CONTRAST_B: `#${string}`;
     CONTRAST_C: `#${string}`;
   };
-  toolsPage?:{
-    title:"Download our free Rng"
-  }
+  toolsPage?: {
+    title: "Download our free Rng";
+  };
+}
+
+export interface SimpleSiteContentStructure {
+  appMarketingSite: boolean;
+  canonicalDomain: string;
+  meta: {
+    title: string;
+    description: string;
+  };
+  pageNames: PageName[];
+  footer: {
+    aboutUs: string;
+    address: string;
+  };
+  home: {
+    openingBanner: {
+      title: string;
+      subTitle: string;
+      tagLine: string;
+    };
+    FAQ: { q: `${string}?`; a: string }[];
+  };
+  contact: {
+    email: string;
+    description: string;
+  };
+  termsAndConditions: {
+    description: string;
+    bullets: [Bullet, Bullet, Bullet, ...Bullet[]];
+  };
+  privacyPolicy: {
+    description: string;
+    bullets: [Bullet, Bullet, Bullet, ...Bullet[]];
+  };
+  colors: {
+    PRIMARY: `#${string}`;
+    SECONDARY: `#${string}`;
+    TERTIARY: `#${string}`;
+    CONTRAST: `#${string}`;
+    CONTRAST_B: `#${string}`;
+    CONTRAST_C: `#${string}`;
+  };
 }
 
 export interface SitesStructure {
   "link-king": ContentStructure;
   griddier: ContentStructure;
   "banana-cards": ContentStructure;
+  "who-whom": SimpleSiteContentStructure;
 }
 
 export type SiteKey = keyof SitesStructure;

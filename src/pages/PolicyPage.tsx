@@ -16,7 +16,7 @@ const PolicyPage: React.FC<{
               ? "Terms and Conditions"
               : "Privacy Policy"}
           </h1>
-          <p className="pb-5 pl-2 md:pl-10">Effective Date: December 8, 2025</p>
+          <p className="pb-5 pl-2 md:pl-10">Effective Date: July 1, 2026</p>
           <p className="py-4">{description}</p>
           <div className="t-and-c-scroll-wrapper">
             <div className="t-and-c-scroll">

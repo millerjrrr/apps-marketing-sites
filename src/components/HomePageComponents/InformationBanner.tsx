@@ -28,8 +28,31 @@ const BannerCard: React.FC<{
 };
 
 const InformationBanner = () => {
-  const { introductionTitle, introductionText, titles, descriptions } =
-    getSiteContent().home.informationBanner;
+  const site = getSiteContent();
+
+  if (!site || !site.appMarketingSite) return null;
+
+  // Narrow the union type at runtime: some sites (non-app marketing) don't have informationBanner
+  const homeAny = site.home as any;
+  if (!homeAny || !("informationBanner" in homeAny)) return null;
+
+  const info:
+    | {
+        introductionTitle: string;
+        introductionText: string;
+        titles?: string[];
+        descriptions?: string[];
+      }
+    | undefined = homeAny.informationBanner;
+
+  if (!info) return null;
+
+  const {
+    introductionTitle,
+    introductionText,
+    titles = ["", "", ""],
+    descriptions = ["", "", ""],
+  } = info;
 
   return (
     <div className="flex w-full flex-1 items-center justify-center">

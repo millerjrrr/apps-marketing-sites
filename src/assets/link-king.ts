@@ -1,6 +1,7 @@
 import type { ContentStructure } from "./interface";
 
 const linkKing: ContentStructure = {
+  appMarketingSite: true,
   canonicalDomain: "link-king.com",
   appStore: "https://apps.apple.com/br/app/link-king/id6496679226",
   playStore: "https://play.google.com/store/apps/details?id=com.linkoking.app",

@@ -15,7 +15,19 @@ const BulletTick: React.FC<{ text: string }> = ({ text }) => {
 };
 
 const ReadyToLevelUpBanner = () => {
-  const { title, bullets } = getSiteContent().home.readyToLevelUpBanner;
+  const site = getSiteContent();
+
+  if (!site || !site.appMarketingSite) return null;
+
+  const homeAny = site.home as any;
+  if (!homeAny || !("readyToLevelUpBanner" in homeAny)) return null;
+
+  const info: { title: string; bullets?: string[] } | undefined =
+    homeAny.readyToLevelUpBanner;
+
+  if (!info) return null;
+
+  const { title = "", bullets = [] } = info;
 
   return (
     <div className="flex w-full flex-1 items-center justify-center">
