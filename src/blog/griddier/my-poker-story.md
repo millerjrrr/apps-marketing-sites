@@ -145,7 +145,6 @@ The games were much tougher than in 2023. Rake was worse (Thanks GG) and Party w
 
 I transitioned to PokerStars, playing 100NL and 200NL, mostly Zoom with some regular tables when games were slow.
 
-It took me a while to shake off the rust but right now I feel like I am playing better than ever. I've been doing less work with the solver and dedicating more time
-to really thinking about my game and trying to identify and tackle both technical and mental game leaks.
+It took me a while to shake off the rust but right now I feel like I am playing better than ever. I've been doing less work with the solver and dedicating more time to really thinking about my game and trying to identify and tackle both technical and mental game leaks.
 
-Right now my biggest technical pain point is my red line. My non-showdown winnings are lagging and represent the clearest structural weakness in my game right now.
+I've also started working with a coach, Luke Johnson @KnowYourPoker.

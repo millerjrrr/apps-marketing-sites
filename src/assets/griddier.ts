@@ -149,9 +149,9 @@ const griddier: ContentStructure = {
     ],
   },
   colors: {
-    PRIMARY: "#34004d",
-    SECONDARY: "#640092",
-    TERTIARY: "#ae00ff",
+    PRIMARY: "#1c0029",
+    SECONDARY: "#310047",
+    TERTIARY: "#713f88",
     CONTRAST: "#efccff",
     CONTRAST_B: "#EEDFA4",
     CONTRAST_C: "#ffffff",
