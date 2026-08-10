@@ -37,11 +37,11 @@ I’m not the guy to take you to high stakes but if you are working towards your
 
 ## Package deals:
 
-For students willing to make a bigger commitment I offer package deals with a 1-1 Discord Server where I dedicate extra help outside of lesson time. Expect extra HH reviews, strategy discussion and custom-made bonus videos upon request, at no charge.
+For students willing to make a bigger commitment I offer package deals with a 1-1 discord server where I dedicate extra help outside of lesson time. Expect extra HH reviews, strategy discussion and custom-made bonus videos upon request, at no charge.
 
 - 1 lesson , no strings attached (1.25 hours) $75
-- 3 months, 3 lessons + Discord server, $450
-- 6 months, 6 lessons + Discord server, $850
+- 3 months, 3 lessons + discord server, $450
+- 6 months, 6 lessons + discord server, $850
 
 ---
 

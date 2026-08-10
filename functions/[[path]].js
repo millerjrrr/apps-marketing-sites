@@ -1,4 +1,5 @@
 import metaConfig from "../src/assets/meta.json";
+import postMeta from "../src/assets/postMeta.json";
 
 export async function onRequest(context) {
   const { request, next } = context;
@@ -18,7 +19,7 @@ export async function onRequest(context) {
     );
   }
 
-   if (pathname === "/favicon.png") {
+  if (pathname === "/favicon.png") {
     const key = host.split(".")[0].toLowerCase();
     const tenant = metaConfig[key] ? key : "link-king";
 
@@ -40,6 +41,22 @@ export async function onRequest(context) {
   // Tenant logic
   const key = host.split(".")[0].toLowerCase();
   const meta = metaConfig[key] || metaConfig["link-king"];
+
+  // If this is a blog post page, try to use the post thumbnail as the OG image.
+  // URL layout: /blog/:slug
+  const blogMatch = pathname.match(/^\/blog\/(?:posts\/)?([^\/]+)\/?$/);
+  if (blogMatch) {
+    const slug = blogMatch[1];
+    const sitePosts = postMeta[key] || postMeta["link-king"] || {};
+    const thumbnail = sitePosts[slug];
+    if (thumbnail) {
+      // Build absolute URL for OG image
+      meta.OG_IMAGE = new URL(
+        `/app-specific/${key}/thumbnails/${thumbnail}`,
+        request.url,
+      ).href;
+    }
+  }
 
   // Get HTML response
   const response = await next();
