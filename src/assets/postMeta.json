@@ -1,6 +1,10 @@
 {
   "griddier": {
-    "coaching": "poker-coaching.jpg",
+    "coaching": {
+      "thumbnail": "poker-coaching.jpg",
+      "title": "Coaching",
+      "description": "As well as playing poker and developing software, I’m taking on a small number of students for 1-on-1 coaching."
+    },
     "my-poker-story": "my-poker-story.jpg"
   },
   "link-king": {

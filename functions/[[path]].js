@@ -40,21 +40,30 @@ export async function onRequest(context) {
 
   // Tenant logic
   const key = host.split(".")[0].toLowerCase();
-  const meta = metaConfig[key] || metaConfig["link-king"];
+  const baseMeta = metaConfig[key] || metaConfig["link-king"];
+  const meta = { ...baseMeta };
 
-  // If this is a blog post page, try to use the post thumbnail as the OG image.
-  // URL layout: /blog/:slug
+  // If this is a blog post page, try to use the post thumbnail, title, and
+  // first-paragraph (description) as OG tags. URL layout: /blog/:slug
   const blogMatch = pathname.match(/^\/blog\/(?:posts\/)?([^\/]+)\/?$/);
   if (blogMatch) {
     const slug = blogMatch[1];
     const sitePosts = postMeta[key] || postMeta["link-king"] || {};
-    const thumbnail = sitePosts[slug];
-    if (thumbnail) {
-      // Build absolute URL for OG image
-      meta.OG_IMAGE = new URL(
-        `/app-specific/${key}/thumbnails/${thumbnail}`,
-        request.url,
-      ).href;
+    const postEntry = sitePosts[slug];
+    if (postEntry) {
+      const thumbnail =
+        typeof postEntry === "string" ? postEntry : postEntry.thumbnail;
+      if (thumbnail) {
+        meta.OG_IMAGE = new URL(
+          `/app-specific/${key}/thumbnails/${thumbnail}`,
+          request.url,
+        ).href;
+      }
+
+      if (typeof postEntry !== "string") {
+        if (postEntry.title) meta.OG_TITLE = postEntry.title;
+        if (postEntry.description) meta.OG_DESCRIPTION = postEntry.description;
+      }
     }
   }
 
