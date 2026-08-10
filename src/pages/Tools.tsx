@@ -7,17 +7,17 @@ const Tools = () => {
     site === "griddier" && (
       <div className="flex w-full flex-1 items-center justify-center p-5 py-20">
         <div
-          className="inner-container flex-col items-center rounded-[30px] bg-[color-mix(in_srgb,var(--secondary)_60%,transparent)]"
+          className="inner-container flex-row items-center justify-center rounded-[30px] bg-[color-mix(in_srgb,var(--secondary)_60%,transparent)]"
           style={{ boxShadow: "0 0 10px 0 var(--contrast-c)" }}
         >
-          <h1 className="p-10">Tools</h1>
+          {/* <h1 className="p-10">Tools</h1> */}
 
-          <div className="personal-detail app-link">
+          <div className="personal-detail app-link ml-5 mr-5">
             <a href="/tools/flop-straight-counter-game" target="_blank">
               Flop Straight Counter Training Game
             </a>
           </div>
-          <div className="personal-detail app-link">
+          <div className="personal-detail app-link ml-5 mr-5">
             <a href="/tools/griddier-ranges-manager" target="_blank">
               Griddier Ranges Manager
             </a>
