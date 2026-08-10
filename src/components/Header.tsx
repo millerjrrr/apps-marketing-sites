@@ -58,7 +58,7 @@ export default function Header() {
           } md:opacity-100`}
         >
           <img
-            src={`app-specific/${siteKey}/icon.png`}
+            src={`/app-specific/${siteKey}/icon.png`}
             className={`site-icon rounded-[] bg-[var(--primary)] md:bg-transparent ${
               show ? "opacity-100" : "md:opacity-0"
             }`}
