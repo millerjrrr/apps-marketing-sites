@@ -6,6 +6,7 @@ import type { RootState } from "../../store";
 import {
   createRangeFromWizard,
   isWizardRange,
+  wizardValueToAction,
 } from "../../utils/createRangeFromWizard";
 import { handsArray } from "../../types";
 
@@ -53,12 +54,7 @@ const PartialRangeButtonsRow = () => {
           raise: Number(hands[wizHand].raise) as 0 | 1 | 2 | 3 | 4,
           call: Number(hands[wizHand].call) as 0 | 1 | 2 | 3 | 4,
           prior: Number(hands[wizHand].prior) as 0 | 1 | 2 | 3 | 4,
-          [action]: Number(Math.ceil(wizData[wizHand] * 4)) as
-            | 0
-            | 1
-            | 2
-            | 3
-            | 4,
+          [action]: wizardValueToAction(wizData[wizHand]) as 0 | 1 | 2 | 3 | 4,
         };
         let total = handActions.allin + handActions.raise + handActions.call;
 

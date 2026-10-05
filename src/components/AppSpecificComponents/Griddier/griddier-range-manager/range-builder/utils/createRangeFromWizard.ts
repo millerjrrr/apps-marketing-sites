@@ -1,7 +1,7 @@
 const pattern =
-  /^(\s*[2-9TJQKA][cdhs][2-9TJQKA][cdhs]\s*:\s*\d+(\.\d+)?)(\s*,\s*[2-9TJQKA][cdhs][2-9TJQKA][cdhs]\s*:\s*\d+(\.\d+)?)*$/;
+  /^(\s*[2-9TJQKA][cdhs][2-9TJQKA][cdhs]\s*:\s*\d+(?:\.\d+)?(?:e[+-]?\d+)?)(\s*,\s*[2-9TJQKA][cdhs][2-9TJQKA][cdhs]\s*:\s*\d+(?:\.\d+)?(?:e[+-]?\d+)?)*\s*$/i;
 
-export const isWizardRange = (str:string) => {
+export const isWizardRange = (str: string) => {
   return pattern.test(str);
 };
 
@@ -66,8 +66,16 @@ export const createRangeFromWizard = (text: string) => {
     text.split(",").map((entry) => {
       const [key, value] = entry.split(":").map((s) => s.trim());
       return [mapKeyToHand(key), parseFloat(value)];
-    })
+    }),
   );
 
   return handData;
+};
+
+export const wizardValueToAction = (value: number): 0 | 1 | 2 | 3 | 4 => {
+  if (value < 0.05) return 0;
+  if (value < 0.25) return 1;
+  if (value < 0.5) return 2;
+  if (value < 0.75) return 3;
+  return 4;
 };
